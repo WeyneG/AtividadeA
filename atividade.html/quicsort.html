@@ -1,0 +1,30 @@
+<script>
+    function quicksort(array) {
+    
+    if (array.length <= 1) {
+        return array;
+    }
+
+    
+    const pivô = array[array.length - 1];
+    let esquerda = [];
+    let direita = [];
+
+    
+    for (let i = 0; i < array.length - 1; i++) {
+        if (array[i] < pivô) {
+            esquerda.push(array[i]);
+        } else {
+            direita.push(array[i]);
+        }
+    }
+
+    
+    return [...quicksort(esquerda), pivô, ...quicksort(direita)];
+}
+
+
+const array = [10, 5, 8, 3, 6, 9, 1, 2];
+console.log(quicksort(array)); 
+
+</script>

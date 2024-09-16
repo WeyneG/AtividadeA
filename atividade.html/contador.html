@@ -1,0 +1,21 @@
+<script>
+    function contarValoresEntrePrimeiroEN(numeros, N) {
+    let primeiro = numeros[0];
+    let contador = 0;
+
+    
+    for (let i = 0; i < numeros.length; i++) {
+        if (numeros[i] >= primeiro && numeros[i] <= N) {
+            contador++;
+        }
+    }
+
+    return contador;
+}
+
+
+const numeros = [3, 7, 2, 8, 5, 9, 10];
+const N = 8;
+console.log(contarValoresEntrePrimeiroEN(numeros, N)); 
+
+</script>
